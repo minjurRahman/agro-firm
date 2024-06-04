@@ -14,6 +14,8 @@ import AddProduct from "../components/dashboard/AddProduct";
 import EditProduct from "../components/dashboard/EditProduct";
 import EditProfile from "../components/dashboard/EditProfile";
 import Profile from "../components/dashboard/Profile";
+import Faq from "../pages/Faq";
+import Career from "../pages/Career";
 
 export const router = createBrowserRouter([
   {
@@ -43,6 +45,14 @@ export const router = createBrowserRouter([
       {
         path: "/register",
         element: <Registration />,
+      },
+      {
+        path: "/faq",
+        element: <Faq />,
+      },
+      {
+        path: "/career",
+        element: <Career />,
       },
     ],
   },

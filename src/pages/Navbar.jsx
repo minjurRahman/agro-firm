@@ -45,6 +45,12 @@ const Navbar = () => {
                 <li>
                   <Link to={"/register"}>Register</Link>
                 </li>
+                <li>
+                  <Link to={"/faq"}>FaQ</Link>
+                </li>
+                <li>
+                  <Link to={"/career"}>Career</Link>
+                </li>
               </>
             )}
             {user && (
@@ -81,6 +87,12 @@ const Navbar = () => {
               </li>
               <li>
                 <Link to={"/register"}>Register</Link>
+              </li>
+              <li>
+                <Link to={"/faq"}>FaQ</Link>
+              </li>
+              <li>
+                <Link to={"/career"}>Career</Link>
               </li>
             </>
           )}
