@@ -20,7 +20,7 @@ const EditProfile = () => {
       email: data?.email,
     };
 
-    fetch(`http://localhost:5000/user/${data?.email}`, {
+    fetch(`https://agro-firm-server.onrender.com/user/${data?.email}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

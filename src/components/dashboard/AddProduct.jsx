@@ -14,7 +14,7 @@ const AddProduct = () => {
 
     const data = { title, brand, price, description, image_url };
 
-    await fetch("http://localhost:5000/shoes", {
+    await fetch("https://agro-firm-server.onrender.com/shoes", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

@@ -24,13 +24,13 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/shoes"),
+        loader: () => fetch("https://agro-firm-server.onrender.com/shoes"),
       },
       {
         path: "/cow-products/:id",
         element: <CowProductDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/shoes/${params.id}`),
+          fetch(`https://agro-firm-server.onrender.com/shoes/${params.id}`),
       },
       {
         path: "/about",
@@ -75,7 +75,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/user/get/${params.id}`),
+          fetch(`https://agro-firm-server.onrender.com/user/get/${params.id}`),
       },
       {
         path: "all-products",
@@ -101,7 +101,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/shoes/${params.id}`),
+          fetch(`https://agro-firm-server.onrender.com/shoes/${params.id}`),
       },
     ],
   },
