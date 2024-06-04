@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../components/dashboard/dashboard";
 import CowProductDetails from "../pages/CowProductDetails";
 import AllProducts from "../components/dashboard/AllProducts";
+import AddProduct from "../components/dashboard/AddProduct";
 
 export const router = createBrowserRouter([
   {
@@ -81,14 +82,14 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      // {
-      //   path: "add-products",
-      //   element: (
-      //     <PrivateRoute>
-      //       <AddProducts />
-      //     </PrivateRoute>
-      //   ),
-      // },
+      {
+        path: "add-products",
+        element: (
+          <PrivateRoute>
+            <AddProduct />
+          </PrivateRoute>
+        ),
+      },
       // {
       //   path: "all-products/edit/:id",
       //   element: (
