@@ -2,6 +2,8 @@ import React from "react";
 import Banner from "./Banner";
 import { useLoaderData } from "react-router-dom";
 import CowProduct from "./CowProduct";
+import Accordion from "./Accordion";
+import DisplayPrimiumProduct from "./DisplayPrimiumProduct";
 
 const Home = () => {
   const data = useLoaderData();
@@ -10,6 +12,8 @@ const Home = () => {
     <div>
       <Banner />
       <CowProduct data={data} />
+      <DisplayPrimiumProduct />
+      <Accordion />
     </div>
   );
 };
