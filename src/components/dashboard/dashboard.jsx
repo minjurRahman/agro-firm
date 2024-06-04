@@ -1,7 +1,5 @@
-import React from "react";
-
 const dashboard = () => {
-  return <div>Dashboard</div>;
+  return <div>Dashboard efg</div>;
 };
 
 export default dashboard;
