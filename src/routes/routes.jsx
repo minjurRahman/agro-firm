@@ -12,6 +12,7 @@ import CowProductDetails from "../pages/CowProductDetails";
 import AllProducts from "../components/dashboard/AllProducts";
 import AddProduct from "../components/dashboard/AddProduct";
 import EditProduct from "../components/dashboard/EditProduct";
+import EditProfile from "../components/dashboard/EditProfile";
 
 export const router = createBrowserRouter([
   {
@@ -65,16 +66,16 @@ export const router = createBrowserRouter([
       //     </PrivateRoute>
       //   ),
       // },
-      // {
-      //   path: "profile/edit/:id",
-      //   element: (
-      //     <PrivateRoute>
-      //       <EditProfile></EditProfile>
-      //     </PrivateRoute>
-      //   ),
-      //   loader: ({ params }) =>
-      //     fetch(`http://localhost:5000/user/get/${params.id}`),
-      // },
+      {
+        path: "profile/edit/:id",
+        element: (
+          <PrivateRoute>
+            <EditProfile />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/user/get/${params.id}`),
+      },
       {
         path: "all-products",
         element: (
