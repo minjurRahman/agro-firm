@@ -11,6 +11,7 @@ import Dashboard from "../components/dashboard/dashboard";
 import CowProductDetails from "../pages/CowProductDetails";
 import AllProducts from "../components/dashboard/AllProducts";
 import AddProduct from "../components/dashboard/AddProduct";
+import EditProduct from "../components/dashboard/EditProduct";
 
 export const router = createBrowserRouter([
   {
@@ -90,16 +91,16 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      // {
-      //   path: "all-products/edit/:id",
-      //   element: (
-      //     <PrivateRoute>
-      //       <EditsProduct />
-      //     </PrivateRoute>
-      //   ),
-      //   loader: ({ params }) =>
-      //     fetch(`http://localhost:5000/shoes/${params.id}`),
-      // },
+      {
+        path: "all-products/edit/:id",
+        element: (
+          <PrivateRoute>
+            <EditProduct />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/shoes/${params.id}`),
+      },
     ],
   },
 ]);
