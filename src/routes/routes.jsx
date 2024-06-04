@@ -13,6 +13,7 @@ import AllProducts from "../components/dashboard/AllProducts";
 import AddProduct from "../components/dashboard/AddProduct";
 import EditProduct from "../components/dashboard/EditProduct";
 import EditProfile from "../components/dashboard/EditProfile";
+import Profile from "../components/dashboard/Profile";
 
 export const router = createBrowserRouter([
   {
@@ -58,14 +59,14 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      // {
-      //   path: "profile",
-      //   element: (
-      //     <PrivateRoute>
-      //       <ProfileDashboard />
-      //     </PrivateRoute>
-      //   ),
-      // },
+      {
+        path: "profile",
+        element: (
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        ),
+      },
       {
         path: "profile/edit/:id",
         element: (
