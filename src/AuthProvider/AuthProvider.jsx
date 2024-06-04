@@ -31,7 +31,7 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  //Logouut Method
+  //Logout Method
   const logout = () => {
     return signOut(auth).then(() => setUser(null));
   };
