@@ -15,7 +15,8 @@ const SingleCowProduct = ({ shoe }) => {
         <p>{description}</p>
         <div className="card-actions justify-end">
           <button className="btn btn-primary">
-            <Link to={`/products/${id}`}>See More</Link>
+            <Link to={`/`}>See More</Link>
+            {/* <Link to={`/cow-products/${id}`}>See More</Link> */}
           </button>
         </div>
       </div>
