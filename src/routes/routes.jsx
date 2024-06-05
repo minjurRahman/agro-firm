@@ -16,6 +16,8 @@ import EditProfile from "../components/dashboard/EditProfile";
 import Profile from "../components/dashboard/Profile";
 import Faq from "../pages/Faq";
 import Career from "../pages/Career";
+import Contact from "../pages/Contact";
+import Blog from "../pages/Blog";
 
 export const router = createBrowserRouter([
   {
@@ -26,13 +28,13 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("https://agro-firm-server.onrender.com/shoes"),
+        loader: () => fetch("https://agro-firm-server.onrender.com/cows"),
       },
       {
         path: "/cow-products/:id",
         element: <CowProductDetails />,
         loader: ({ params }) =>
-          fetch(`https://agro-firm-server.onrender.com/shoes/${params.id}`),
+          fetch(`https://agro-firm-server.onrender.com/cows/${params.id}`),
       },
       {
         path: "/about",
@@ -53,6 +55,14 @@ export const router = createBrowserRouter([
       {
         path: "/career",
         element: <Career />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
       },
     ],
   },
@@ -111,7 +121,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://agro-firm-server.onrender.com/shoes/${params.id}`),
+          fetch(`https://agro-firm-server.onrender.com/cows/${params.id}`),
       },
     ],
   },
