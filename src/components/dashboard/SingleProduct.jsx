@@ -7,7 +7,7 @@ const SingleProduct = ({ data, deletedProduct }) => {
   const token = localStorage.getItem("token");
 
   const handleDelete = async () => {
-    await fetch(`https://agro-firm-server.onrender.com/shoes/${_id}`, {
+    await fetch(`https://agro-firm-server.onrender.com/cows/${_id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",

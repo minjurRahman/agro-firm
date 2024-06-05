@@ -26,7 +26,7 @@ const EditProduct = () => {
 
     const data = { title, brand, price, description, image_url };
 
-    await fetch(`https://agro-firm-server.onrender.com/shoes/${product._id}`, {
+    await fetch(`https://agro-firm-server.onrender.com/cows/${product._id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",

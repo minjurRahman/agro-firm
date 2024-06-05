@@ -1,22 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const SingleCowProduct = ({ shoe }) => {
-  const { id, title, brand, price, description, image_url } = shoe;
+const SingleCowProduct = ({ data }) => {
+  const { _id, title, brand, price, description, image_url } = data;
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
-      <figure>
-        <img src={image_url} alt="Shoes" />
+      <figure className="h-60">
+        <img src={image_url} alt="Product Image" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <h3 className="text-xl front-semibold">{brand}</h3>
         <h3 className="text-xl front-semibold text-red-600">{price}</h3>
-        <p>{description}</p>
+        <p>{description.slice(0, 50)}...</p>
         <div className="card-actions justify-end">
           <button className="btn btn-primary">
-            <Link to={`/`}>See More</Link>
-            {/* <Link to={`/cow-products/${id}`}>See More</Link> */}
+            <Link to={`/cow-products/${_id}`}>See More</Link>
           </button>
         </div>
       </div>
